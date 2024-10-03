@@ -6,7 +6,7 @@
 
 /metadata              ext4    /dev/block/bootdevice/by-name/metadata                             flags=display="metadata";backup=1;wrappedkey
 
-/data                      f2fs                /dev/block/bootdevice/by-name/userdata                 flags=fileencryption=ice;wrappedkey;keydirectory=/metadata/vold/metadata_encryption
+/data                      f2fs                /dev/block/bootdevice/by-name/userdata                 flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized;wrappedkey;keydirectory=/metadata/vold/metadata_encryption
 
 /cache                 ext4    /dev/block/bootdevice/by-name/rescue                               flags=display="cache";backup=1;wipeingui;wipeduringfactoryreset
 
